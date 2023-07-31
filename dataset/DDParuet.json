@@ -1,5 +1,5 @@
 {
-	"name": "DestinationDataset_ngk",
+	"name": "DDParuet",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorageGen2",

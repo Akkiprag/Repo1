@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy_ngk",
+				"name": "CopyCSVtoParquet",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -49,6 +49,176 @@
 					"validateDataConsistency": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "CustomerID",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CustomerID",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "NameStyle",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NameStyle",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Title",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Title",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "FirstName",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FirstName",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "MiddleName",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MiddleName",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "LastName",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LastName",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Suffix",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Suffix",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "CompanyName",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CompanyName",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "SalesPerson",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SalesPerson",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "EmailAddress",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "EmailAddress",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "Phone",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Phone",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "PasswordHash",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PasswordHash",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "PasswordSalt",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PasswordSalt",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							},
+							{
+								"source": {
+									"name": "rowguid",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "rowguid",
+									"type": "String",
+									"physicalType": "UTF8"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
@@ -58,13 +228,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "SourceDataset_ngk",
+						"referenceName": "SDCSV",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DestinationDataset_ngk",
+						"referenceName": "DDParuet",
 						"type": "DatasetReference"
 					}
 				]
